@@ -20,8 +20,6 @@ def generate_text(prompt):
     # Generar texto con el modelo
     outputs = model.generate(inputs['input_ids'], attention_mask=inputs['attention_mask'], max_new_tokens=50)
     generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
-    generated_text=generated_text.replace(prompt,'',1)
-
     return generated_text
 
 # Título de la aplicación
